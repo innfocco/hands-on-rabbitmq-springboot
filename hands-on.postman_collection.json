@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "aa49d63b-38d9-49aa-b99d-b5a5120363f6",
+		"name": "hands-on-k8s",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "send-message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"{{$guid}}\",\n\t\"header\" : \"Titulo da Msg\",\n\t\"body\" : \"mensagem para a fila mobile...\", \n    \"device\" : \"mobile\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
